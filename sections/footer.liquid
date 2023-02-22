@@ -1,0 +1,257 @@
+{%- assign newsletter_block = section.blocks | where: 'type', 'newsletter' | first -%}
+
+
+<style>
+.footer-grid{
+	display: grid;
+    grid-template-columns: 2fr 3fr 3fr;
+}
+
+.footer{
+	background-image: linear-gradient(315deg,#16254c 0%,#000711 100%)!important;
+    padding: 5% 10% 5% 10%;
+}
+
+
+.footer-title{
+	color: #bb9d5a;
+    font-size: 16px;
+    border-bottom: 2px solid #bb9d5a;
+    padding-bottom: 15px;
+}
+
+.footer-text{
+	color:#8aaadb;
+    font-size: 14px;
+}
+
+
+.footer-hype-text{
+	color:#617B9B;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-hype-text:hover{
+	color: #8aaadb;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-container{
+	margin-right: 9%;
+}
+
+.icon{
+	height:20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 575px){
+  .footer-grid{
+    display: block;
+  }
+  .footer-container{
+    margin-top: 15px;
+  }
+}
+</style>
+
+<div class="footer">
+	<div class="footer-grid" >
+		<div><p style="color:white;"><img style="width:35%;" src="https://bhaktimarga.org/previewportal/img/bhaktimarga-brand-gold-vertical.png"></p></div>
+			<div class="footer-container">
+    		<p class="footer-title">BHAKTI MARGA WEBSITES</p>
+    		<p><a class="footer-hype-text"href="https://www.paramahamsavishwananda.com/" target="_blank" rel="noopener noreferrer">Paramahamsa Vishwananda</a><br><a class="footer-hype-text" href="https://www.justlovefestival.org/" target="_blank" rel="noopener noreferrer">Just Love Festival</a><br><a class="footer-hype-text" href="https://theashram.bhaktimarga.org/" target="_blank" rel="noopener noreferrer">The Ashram – Shree Peetha Nilaya</a></p>
+    		</div>
+
+		<div class="footer-container">
+    		<p class="footer-title">CONTACT & FOLLOW</p>
+    		<p><a class="footer-hype-text" href="https://pages.bhaktimarga.org/help-centre" target="_blank" rel="noopener">Help Centre</a></p>
+        	<div style="display: flex;flex-wrap: nowrap;flex-direction: row; margin-top: 15px;"><a href="https://www.youtube.com/channel/UCRA5DC4xf7slRF8W7taZ-fQ"><img class="icon" src="https://bhaktimarga.org/previewportal/img/youtube-icon.svg"></a><a href="https://www.facebook.com/bhaktimarga108/"><img class="icon" src="https://bhaktimarga.org/previewportal/img/facebook-icon.svg"></a><a href="https://www.instagram.com/bhaktimarga/"><img class="icon" src="https://bhaktimarga.org/previewportal/img/instagram-icon1.svg"></a><a href="https://twitter.com/BhaktiMarga108"><img class="icon" src="https://bhaktimarga.org/previewportal/img/twitter-icon.svg"></a><a href="https://www.flickr.com/photos/bhaktimarga/albums"><img style="height: 13px;" class="icon" src="https://bhaktimarga.org/previewportal/img/flickr-icon.svg"></a></div>
+    	</div>
+	</div>
+    <p style="border-top: 1px solid #617B9B; padding-top: 15px; margin-top: 3%;"class="footer-text">© 2023 Bhakti Event GmbH. All rights reserved. <a class="footer-hype-text" href="https://bhaktishop-108.myshopify.com/policies/privacy-policy.html?locale=en-DE" target="_blank" rel="noopener" >Privacy Policy</a> | <a href="https://bhaktishop-108.myshopify.com/policies/terms-of-service.html?locale=en-DE" class="footer-hype-text">Terms and Conditions</a> |&nbsp;<a class="footer-hype-text" href="https://bhaktishop-108.myshopify.com/policies/legal-notice.html?locale=en-DE" target="_blank" rel="noopener">Legal Notice </a>|&nbsp;<a class="footer-hype-text" href="https://bhaktishop-108.myshopify.com/policies/shipping-policy.html?locale=en-DE" target="_blank" rel="noopener">Shipping Policy </a>&nbsp;| <a class="footer-hype-text" href="https://bhaktishop-108.myshopify.com/policies/contact-information.html?locale=en-DE">Imprint </a>&nbsp;| <a class="footer-hype-text" href="https://bhaktishop-108.myshopify.com/policies/refund-policy.html?locale=en-DE">Revocation Right for Consumers </a>&nbsp;| <a class="footer-hype-text" href="https://bhaktishop-108.myshopify.com/pages/cookies-notice">Cookies Policy</a></p>
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "class": "shopify-section--footer",
+  "tag": "footer",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "info": "To configure social media, go to your social media settings.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show payment icons",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Country/region selector",
+      "info": "To add a country/region, go to your [currency settings.](/admin/settings/payments)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_selector",
+      "label": "Show country/region selector",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_flag",
+      "label": "Show country flag",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_name",
+      "label": "Show country name",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Language selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "Show language selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Customer privacy bar",
+      "info": "Privacy bar will only be visible if it fulfills the conditions of the [Shopify Customer Privacy API](https://shopify.dev/docs/themes/consent-tracking-api) or inside the theme editor to ease editing."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_privacy_bar",
+      "label": "Show privacy bar",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "privacy_bar_title",
+      "label": "Title",
+      "default": "Cookie policy"
+    },
+    {
+      "type": "richtext",
+      "id": "privacy_bar_content",
+      "label": "Content",
+      "default": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "About our store"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
+        }
+      ]
+    },
+    {
+      "type": "links",
+      "name": "Links",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "info": "This menu won't show dropdown items.",
+          "default": "footer"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_menu_title",
+          "label": "Show menu title",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Customers who subscribe will have their email address added to the \"accepts marketing\" [customer list](/admin/customers?query=&accepts_marketing=1)."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "600 x 600px .png recommended"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 300,
+          "step": 10,
+          "unit": "px",
+          "label": "Image width",
+          "default": 150
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Title size",
+          "options": [
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ],
+          "default": "h3"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Sign up to our newsletter"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
